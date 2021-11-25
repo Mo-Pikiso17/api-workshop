@@ -18,7 +18,7 @@ brandBtnElem.addEventListener("click", function () {
 
     console.log(model)
 
-    axios.get(`http://api-tutor.herokuapp.com/v1/cars/make/${model}/color/${modelColor}`)
+    axios.get(`https://api-tutor.herokuapp.com/v1/cars/make/${model}/color/${modelColor}`)
     // /v1/cars/make/:make/color/:car_color	
         .then(function (result) {
             console.log(result.data);

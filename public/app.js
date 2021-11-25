@@ -13,15 +13,14 @@ const template2 = Handlebars.compile(templateMake.innerText);
 const templateCar = document.querySelector('.carT');
 const template3 = Handlebars.compile(templateCar.innerText);
 
-axios.get('http://api-tutor.herokuapp.com/v1/colors')
-
+axios.get('https://api-tutor.herokuapp.com/v1/colors')
     .then(function (result) {
 
         color.innerHTML = template1({ color: result.data });
 
     });
 
-axios.get('http://api-tutor.herokuapp.com/v1/makes')
+axios.get('https://api-tutor.herokuapp.com/v1/makes')
 
     .then(function (result) {
 
@@ -29,7 +28,7 @@ axios.get('http://api-tutor.herokuapp.com/v1/makes')
 
     })
 
-axios.get('http://api-tutor.herokuapp.com/v1/cars')
+axios.get('https://api-tutor.herokuapp.com/v1/cars')
 
     .then(function (result) {
 
