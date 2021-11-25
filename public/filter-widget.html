@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,102 @@
 	<title>Filter widget</title>
 	<link rel="stylesheet" href="style.css">
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.js"
+		integrity="sha256-hSzapznWRy/aOZkctlN03an9DxCLlN8ZCQS0lxntiHg=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"
+		integrity="sha256-S1J4GVHHDMiirir9qsXWc8ZWw74PHHafpsHp5PXtjTs=" crossorigin="anonymous"></script>
+
+	<script type="template" class="carBrand">
+
+		{{#each carBrnd}}
+		<ul>
+			<li>
+				{{this.model}} 	{{this.color}}
+
+
+			</li>
+		</ul>
+		{{/each}}
+
+	</script>
+
+	<!-- <script type="template" class="carColor">
+
+		{{#each carCol}}
+		<ul>
+			<li>
+				{{this.color}}
+
+			</li>
+		</ul>
+		{{/each}}
+
+	</script> -->
 </head>
+
 <body>
 	<h1>Filter widget</h1>
+
+	<div class="car_brands">
+
+		<label for="brandS">Car brand:</label>
+		<select id="caR" name="carB" class="carBrands">
+			<option>Select</option>
+			<option value="Volkswagen">Volkswagen</option>
+			<option value="Toyota">Toyota</option>
+			<option value="Nissan">Nissan</option>
+			<option value="Ford">Ford</option>
+		</select>
+
+		<label for="colorS">Car color:</label>
+		<select id="coloR" name="colorB" class="colorB">
+			<option>Select</option>
+			<option value="Blue">Blue</option>
+			<option value="Red">Red</option>
+			<option value="Orange">Orange</option>
+			<option value="White">White</option>
+			<option value="Grey">Grey</option>
+
+		</select>
+
+		<button type="submit" class="btn">SUBMIT</button>
+
+	</div>
+
+	<!-- <div class="car_color">
+
+		<label for="colorS">Select a car color:</label>
+		<select id="coloR" name="colorB" class="colorB">
+			<option>Select</option>
+			<option value="Blue">Blue</option>
+			<option value="Red">Red</option>
+			<option value="Orange">Orange</option>
+			<option value="White">White</option>
+			<option value="Grey">Grey</option>
+
+		</select>
+
+		<button class="btns" type="submit">SUBMIT</button>
+
+	</div> -->
+
+
+		<h3>model & color:</h3>
+
+		<div class="cB"></div>
+
+		<!-- </div>
+
+		<h3 style="margin: 20px;">color:</h3>
+
+		<div style="margin: 20px;" class="cC">
+
+		</div> -->
+
+
+
+
+	<script src="filter.js"></script>
 </body>
+
 </html>
